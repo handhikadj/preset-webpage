@@ -73,13 +73,15 @@ export default (editor: Editor, opts: RequiredPluginOptions) => {
         label: `<svg ${iconStyle} viewBox="0 0 24 24">
             <path fill="currentColor" d="M5,5H10V7H7V10H5V5M14,5H19V10H17V7H14V5M17,14H19V19H14V17H17V14M10,17V19H5V14H7V17H10Z" />
         </svg>`
-      },{
-        id: expt,
-        command: () => editor.runCommand(expt),
-        label: `<svg ${iconStyle} viewBox="0 0 24 24">
-            <path fill="currentColor" d="M12.89,3L14.85,3.4L11.11,21L9.15,20.6L12.89,3M19.59,12L16,8.41V5.58L22.42,12L16,18.41V15.58L19.59,12M1.58,12L8,5.58V8.41L4.41,12L8,15.58V18.41L1.58,12Z" />
-        </svg>`
-      },{
+      },
+      // {
+      //   id: expt,
+      //   command: () => editor.runCommand(expt),
+      //   label: `<svg ${iconStyle} viewBox="0 0 24 24">
+      //       <path fill="currentColor" d="M12.89,3L14.85,3.4L11.11,21L9.15,20.6L12.89,3M19.59,12L16,8.41V5.58L22.42,12L16,18.41V15.58L19.59,12M1.58,12L8,5.58V8.41L4.41,12L8,15.58V18.41L1.58,12Z" />
+      //   </svg>`
+      // },
+      {
         id: 'undo',
         command: () => editor.runCommand('core:undo'),
         label: `<svg ${iconStyle} viewBox="0 0 24 24">
@@ -95,15 +97,14 @@ export default (editor: Editor, opts: RequiredPluginOptions) => {
         id: cmdImport,
         command: () => editor.runCommand(cmdImport),
         label: `<svg ${iconStyle} viewBox="0 0 24 24">
-            <path fill="currentColor" d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" />
-        </svg>`,
-      },{
-        id: cmdClear,
-        command: () => editor.runCommand(cmdClear),
-        label: `<svg ${iconStyle} viewBox="0 0 24 24">
-              <path fill="currentColor" d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" />
-          </svg>`,
-      }],
+          <path fill="currentColor" d="M12.89,3L14.85,3.4L11.11,21L9.15,20.6L12.89,3M19.59,12L16,8.41V5.58L22.42,12L16,18.41V15.58L19.59,12M1.58,12L8,5.58V8.41L4.41,12L8,15.58V18.41L1.58,12Z" />
+        </svg>`
+      },
+      // { id: "export-to-zip", className: "fa fa-download", attributes: { title: "Download Template to ZIP" }, command: "export-to-zip" },
+      { id: "open-templates", className: "fa fa-folder-o", attributes: { title: "Open Template Manager" }, command: "open-templates" },
+      { id: "open-block-manager", className: "fa fa-th", attributes: { title: "Open Block Manager" }, command: "open-block-manager" },
+      { id: "import-html-assets", className: "fa fa-files-o", attributes: { title: "Import CSS and JS" }, command: "import-html-assets" },
+    ],
   },{
     id: 'views',
     buttons  : [{
